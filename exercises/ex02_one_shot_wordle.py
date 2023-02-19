@@ -22,21 +22,21 @@ while idx < len(SECRET):
         if guess[idx] == SECRET[idx]:
             result = result + GREEN_BOX
         else: 
-            while elsewhere == False and alt_idx < len(SECRET):
+            while elsewhere is False and alt_idx < len(SECRET):
                 if (guess[idx] == SECRET[alt_idx]):
                     # If the character is found elsewhere, exit the loop
                     elsewhere = True 
-                else: # If the character does not appear elsewhere, check the next index
+                else:   # If the character does not appear elsewhere, check the next index
                     alt_idx = alt_idx + 1
-            if (elsewhere == True): # If the character appeared elsewhere, add a yellow box to the result
+            if (elsewhere is True):   # If the character appeared elsewhere, add a yellow box to the result
                 result = result + YELLOW_BOX
-            else: # If the character does not appear elsewhere, add a white box to the result
+            else:   # If the character does not appear elsewhere, add a white box to the result
                 result = result + WHITE_BOX
         elsewhere = False
     idx = idx + 1
     alt_idx = 0
-if guess == SECRET: # print the result for correct guess
+if guess == SECRET:   # print the result for correct guess
     print(f"{result}\nWoo! You got it!")
-else: # print the result for incorrect guess
+else:   # print the result for incorrect guess
     print(f"{result}\nNot quite. Play again soon!")
             
