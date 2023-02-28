@@ -48,7 +48,7 @@ def input_guess(length: int) -> str:
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     turn: int = 1
-    secret: str = "python"
+    secret: str = "codes"
     while turn <= 6:
         print (f"=== Turn {turn}/6 ===")  # indicate the current turn number
         guess: str = input_guess(len(secret))  # prompt the user for a guess of the correct length
@@ -56,7 +56,7 @@ def main() -> None:
         print (result)
         if guess == secret:  # print the result for correct guess and exit the program
             print (f"You won in {turn}/6 turns!")
-            exit()
+            return
         else:  # if the guess is wrong move on to the next turn
             turn = turn + 1
     print (f"X/6 - Sorry, try again tomorrow!")  # exit the program when the turns are used up and print the result
