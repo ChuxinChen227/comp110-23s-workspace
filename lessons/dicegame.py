@@ -10,7 +10,7 @@ dice_idx: int = 0
 dice_sum: int = 0
 
 while dice_idx <= len(dice_rolls) - 1:
-    print(dice_rolls[3])
+    print(dice_rolls[2])
     dice_sum += dice_rolls[dice_idx]
     dice_idx += 1 
 print(dice_sum)
