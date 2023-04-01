@@ -5,6 +5,7 @@ __author__ = "730564297"
 from exercises.ex07.dictionary import invert, favorite_color, count
 import pytest
 
+
 def test_invert_duplicated_value() -> None:
     """Test invert function with an input dictionary that has duplicate values."""
     with pytest.raises(KeyError):
@@ -14,7 +15,7 @@ def test_invert_duplicated_value() -> None:
 
 def test_invert_normal() -> None:
     """Test invert function with a normal input dictionary."""
-    test_dict = {'a': 'z', 'b' : 'y', 'c': 'x'}
+    test_dict = {'a': 'z', 'b': 'y', 'c': 'x'}
     assert invert(test_dict) == {'z': 'a', 'y': 'b', 'x': 'c'}
 
 
